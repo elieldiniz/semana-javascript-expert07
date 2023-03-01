@@ -1,0 +1,18 @@
+
+
+workers -> toda logica Pesada (que envolva CPU)
+        -> tudo que pode travar a tela (for lop, machine learning, IA , processamento de web CAM)
+        -> ele chama as regras de negocio da service
+
+services -> camada 1 : toda logica de negocio
+         -> toda chamada externa (API, arquivos, banco de dados)
+
+view -> camada 2 : toda iteracao com o DOM (Com html, com a pagina )
+
+controllers -> camada 3 : e a intermediaria entre serves e views
+
+factorie -> camada 4 : a fectory e quem importa as dependencias
+         -> e cria o objeto final para fazermos as chamadas
+         -> retorna a funcao que inicializa o fluxo da quele componente(init)
+
+index.js -> resposavel por chamar todas as camadas
