@@ -1,14 +1,14 @@
 function supportWorkerType() {
-    let supoports = false
+    let supports = false
     const tester = {
-        get type() {supoports = true}
+        get type() {supports = true}
     }
 
     try {
         new Worker ('blob://', {type :'module'}).terminate()
         
     } finally{
-        return supoports
+        return supports
     }
         
 }
